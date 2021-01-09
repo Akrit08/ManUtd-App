@@ -1,6 +1,22 @@
 /* GLOBAL STYLES */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   color: #343434;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+section {
+  background: rgb(177, 168, 168);
 }
 img {
   width: 200px;
@@ -11,36 +27,137 @@ a {
 a:hover {
   text-decoration: none;
 }
+h1 {
+  font-size: 65px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 45px;
+  margin: 0;
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+.divider {
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
 /* HEADER */
 header {
-  background: #2f3061;
+  background: #d10f0f;
   color: #f7fff7;
+}
+.manutd-logo {
+  width: 120px;
+  margin: 10px;
+  float: left;
 }
 
 /* ABOUT SECTION */
 .about {
-  background: #f7fff7;
+  background: #adebad;
   text-decoration: none;
 }
 .about a {
+  color: #2f3061;
+}
+.about .btn {
   color: #f7fff7;
   background: #2f3061;
   text-decoration: none;
   padding: 8px;
   border-radius: 4px;
+  display: inline-block;
 }
+.about .btn:hover {
+  background: rgba(47, 48, 97, 80%);
+}
+.about-item {
+  overflow: auto;
+}
+.about-item h3 {
+  margin-top: 0;
+}
+
 /* KIT SECTION */
 .kits-manutd {
   background: #a1c607;
 }
 
-/* SQUAD */
+/* SQUAD SECTION */
 .squad {
-  background: #a1cca1;
+  background-image: url(../images/ManUtd_bgPlain.jpg);
+  background-size: 100% 100%;
+  background-position: top right;
+  padding-bottom: 100px;
+  color: #f8c5c5;
+}
+.squad p {
+  width: 60%;
 }
 
 /* CONTACT INFO */
 footer {
   background: #343434;
   color: #f7fff7;
+  text-align: center;
+}
+.contact-list {
+  list-style-type: none;
+}
+.contact-list a {
+  padding: 15px;
+  display: inline-block;
+}
+
+/* RESPONSIVE STYLES */
+@media screen and (min-width: 750px) {
+  .about-item-2 img {
+    float: left;
+    margin-right: 20px;
+  }
+  .about-item-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, 2fr);
+    column-gap: 20px;
+  }
+  .contact-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
 }
