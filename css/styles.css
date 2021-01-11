@@ -16,13 +16,13 @@ body {
   line-height: 1.5;
 }
 section {
-  background: rgb(177, 168, 168);
+  background: rgb(241, 236, 236);
 }
 img {
   width: 200px;
 }
 a {
-  color: #ffe66d;
+  color: #e01a1a;
 }
 a:hover {
   text-decoration: none;
@@ -64,7 +64,12 @@ h3 {
 
 /* HEADER */
 header {
+  margin: 1px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
   background: #d10f0f;
+  box-shadow: 5px 5px 10px black;
   color: #f7fff7;
 }
 .manutd-logo {
@@ -72,7 +77,11 @@ header {
   margin: 10px;
   float: left;
 }
-
+.manutd-logo-about {
+  width: 70px;
+  margin-right: 20px;
+  float: left;
+}
 /* ABOUT SECTION */
 .about {
   background: #adebad;
@@ -101,7 +110,7 @@ header {
 
 /* KIT SECTION */
 .kits-manutd {
-  background: #a1c607;
+  background: #f0efef;
 }
 
 /* SQUAD SECTION */
@@ -122,6 +131,9 @@ footer {
   color: #f7fff7;
   text-align: center;
 }
+footer a {
+  color: #adebad;
+}
 .contact-list {
   list-style-type: none;
 }
@@ -132,10 +144,6 @@ footer {
 
 /* RESPONSIVE STYLES */
 @media screen and (min-width: 750px) {
-  .about-item-2 img {
-    float: left;
-    margin-right: 20px;
-  }
   .about-item-grid {
     display: grid;
     grid-template-columns: 1fr repeat(1, 2fr);
